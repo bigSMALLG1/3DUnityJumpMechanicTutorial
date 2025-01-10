@@ -35,12 +35,22 @@ set the y velocity to 0 so that your player jumps the same height each time
 
 7. Next we want to add the force of jumping upwards to our player. We will do this by using rb.AddForce which adds a force to the rigidbody on our player. The paramters being transform.up for the forces direction. This is multiplied by our jumpForce to determine how much force is in our jump. We will also use ForceMode.Impulse as we are only doing this once when the jump key is pressed, rather than this force being constant.
    
-9. Then make a ResetJump function to set readyToJump to true again once the player is grounded.
+9. Then make a ResetJump function to set readyToJump to true again once the player is grounded. We will need to assign the jumpkey to the spacebar so type public (KeyCode jumpKey = KeyCode.Space;) where your other variables are. 
+ 
+ 
    
 ![image](https://github.com/user-attachments/assets/66932d27-dfc9-41ad-a53d-79d04dd39695)
 
-10. Navigate back to your KeyInput method
+10. Navigate back to your KeyInput method where we will be using an if statement for when the spacebar is pressed depending on whether the player is ready to jump and is grounded.
+ 
+![image](https://github.com/user-attachments/assets/68a43f07-b5ef-415a-9f26-555a42c7a0e3)
 
+
+Inside the if statement we want to set readyToJump as false because we will have already pressed the spacebar and will be in the midst of jumping so we don't want to be able to jump again. We also call the Jump method so we can actually jump and then we invoke the ResetJump method and start the cooldown so we can jump again when ready.
+
+11. Finally, add these if and else if statements so we can apply the air multiplier and have better air control when jumping.
+
+12. Go back in to unity and change the values of the JumpForce and, JumpCoolDown and AirMultiplier to your liking.
 
 
 
