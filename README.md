@@ -1,9 +1,9 @@
 # 3DUnityJumpMechanicTutorial
 A tutorial on how to program a jumping mechanic in a 3D Unity environment using C#.
 
-==================================================================
+
 This tutorial follows on from the first person movement tutorial.
-==================================================================
+
 
 1. Navigate to your script that controls your players movement.
 
